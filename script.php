@@ -17,6 +17,27 @@ $categorias[] = 'idoso';
 $nome = $_POST['nome'];
 $idade = $_POST['idade'];
 
+if (empty($nome)) {
+    echo "Nome não pode ser vazio";
+    # code...
+
+}
+
+if (strlen($nome) < 3) {
+    echo "O nome deve conter menos de 3 caracteres";
+}
+
+if (strlen($nome) > 40) {
+    echo "Não pode ter mais de 40 caracteres";
+    
+}
+
+if (!is_numeric($idade)) {
+    # code...
+    echo "Apenas numeros são permitidos";
+    return;
+}
+
 if ($idade >= 6 && $idade <= 12) {
     for ($i = 0; $i < count($categorias); $i++) {
         if ($categorias[$i] == 'infantil') {
