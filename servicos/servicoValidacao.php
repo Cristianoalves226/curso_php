@@ -29,4 +29,10 @@ function validaIdade(string $idade): bool
 
 function setarMensagemDeSucesso(string $idade) 
 {
+    if(!is_numeric($idade))
+    {
+        setarMensagemErro('Informe um número para idade');
+        return false;
+    }
+    return true;
 }

@@ -28,7 +28,7 @@ function obterMensagemSucesso(): ?string
     return null;
 }
 
-function removerMensagemSErro(): void
+function removerMensagemErro(): void
 {
     if (isset($_SESSION['mensagem-de-erro'])) {
         unset($_SESSION['mensagem-de-erro']);
